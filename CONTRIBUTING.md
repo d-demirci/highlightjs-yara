@@ -34,11 +34,11 @@ Then, install the dependencies:
 
     $ npm i
 
-Create an `extra` directory and clone the [highlightjs-yara](https://github.com/highlightjs/highlightjs-yara) repository in it:
+Create an `extra` directory and clone the [highlightjs-yara](https://github.com/d-demirci/highlightjs-yara) repository in it:
 
     $ mkdir extra
     $ cd extra
-    $ git clone https://github.com/highlightjs/highlightjs-yara
+    $ git clone https://github.com/d-demirci/highlightjs-yara
     $ cd ..
 
 Now we are ready to generate the `dist` file.
