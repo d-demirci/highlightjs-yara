@@ -7,7 +7,7 @@ We recommend nvm to manage multiple active Node versions.
 
 Start by cloning the source from GitHub:
 
-    $ git clone https://github.com/highlightjs/highlightjs-yara.git
+    $ git clone https://github.com/d-demirci/highlightjs-yara.git
 
 Next, install the dependencies using `npm`:
 
