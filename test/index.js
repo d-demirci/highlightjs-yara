@@ -3,17 +3,17 @@ const promisify = require('util').promisify;
 const path = require('path');
 const hljs = require('highlightjs');
 const fs = require('fs');
-const hljsDefineCypher = require('../src/cypher');
-hljs.registerLanguage('cypher', hljsDefineCypher);
+const hljsDefineYara = require('../src/yara');
+hljs.registerLanguage('yara', hljsDefineYara);
 
 const readdir = promisify(fs.readdir);
 const readFile = promisify(fs.readFile);
 
-describe('Cypher syntax highlighting', () =>
+describe('Yara syntax highlighting', () =>
 {
   async function itShouldPerformSyntaxHighlighting()
   {
-    hljs.registerLanguage('cypher', hljsDefineCypher);
+    hljs.registerLanguage('yara', hljsDefineYara);
     const files = (await readdir(path.join(__dirname, 'markup')))
       .filter(f => !f.includes('.expect.'));
     const scenarios = files.map(f => f.replace(/\.txt$/, ''));
@@ -34,12 +34,12 @@ describe('Cypher syntax highlighting', () =>
   itShouldPerformSyntaxHighlighting();
 
   // The following test is ignored because the language detected is pgsql.
-  // Since the Cypher syntax can be confused with SQL, I don't think we should use "highlightAuto" (as it will produce unexpected results)
-  // Please note that Highlight.js can also return css or lisp depending on the code used.
-  xit('should detect cypher language', async () =>
+  // Since the yara syntax can be confused with json, I don't think we should use "highlightAuto" (as it will produce unexpected results)
+  // Please note that Highlight.js can also return json.
+  xit('should detect yara language', async () =>
   {
     var code = await readFile(path.join(__dirname, 'detect', 'default.txt'), 'utf-8');
     var actual = hljs.highlightAuto(code).language;
-    actual.should.eql('cypher');
+    actual.should.eql('yara');
   });
 });

@@ -2,12 +2,12 @@
 
 ## Setup
 
-To build highlightjs-cypher, you'll need the latest long term support (LTS) release of Node and npm.
+To build highlightjs-yara, you'll need the latest long term support (LTS) release of Node and npm.
 We recommend nvm to manage multiple active Node versions.
 
 Start by cloning the source from GitHub:
 
-    $ git clone https://github.com/highlightjs/highlightjs-cypher.git
+    $ git clone https://github.com/highlightjs/highlightjs-yara.git
 
 Next, install the dependencies using `npm`:
 
@@ -34,11 +34,11 @@ Then, install the dependencies:
 
     $ npm i
 
-Create an `extra` directory and clone the [highlightjs-cypher](https://github.com/highlightjs/highlightjs-cypher) repository in it:
+Create an `extra` directory and clone the [highlightjs-yara](https://github.com/highlightjs/highlightjs-yara) repository in it:
 
     $ mkdir extra
     $ cd extra
-    $ git clone https://github.com/highlightjs/highlightjs-cypher
+    $ git clone https://github.com/highlightjs/highlightjs-yara
     $ cd ..
 
 Now we are ready to generate the `dist` file.
@@ -46,4 +46,4 @@ Open a terminal and type:
 
     $ node  --stack-size=65500  ./tools/build.js -t cdn
 
-The generated file will be available in both `build/languages/cypher.min.js` and `extra/highlightjs-cypher/dist/cypher.min.js`.
+The generated file will be available in both `build/languages/yara.min.js` and `extra/highlightjs-yara/dist/yara.min.js`.

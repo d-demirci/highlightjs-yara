@@ -1,12 +1,12 @@
 ![logo](logo.svg)
 
-# Cypher - a language grammar for [highlight.js](https://highlightjs.org/)
+# Yara - a language grammar for [highlight.js](https://highlightjs.org/)
 
-![version](https://badgen.net/npm/v/highlightjs-cypher) ![license](https://badgen.net/badge/license/CC0%201.0/blue)
-![install size](https://badgen.net/packagephobia/install/highlightjs-cypher) ![minified size](https://badgen.net/bundlephobia/min/highlightjs-cypher)
-[![Build Status](https://travis-ci.com/highlightjs/highlightjs-cypher.svg?branch=master)](https://travis-ci.com/highlightjs/highlightjs-cypher)
+![version](https://badgen.net/npm/v/highlightjs-yara) ![license](https://badgen.net/badge/license/CC0%201.0/blue)
+![install size](https://badgen.net/packagephobia/install/highlightjs-yara) ![minified size](https://badgen.net/bundlephobia/min/highlightjs-yara)
+[![Build Status](https://travis-ci.com/highlightjs/highlightjs-yara.svg?branch=master)](https://travis-ci.com/highlightjs/highlightjs-yara)
 
-Cypher is a declarative graph query language created by [Neo4j](https://neo4j.com/) for the graph database management system.
+YARA is a tool aimed at (but not limited to) helping malware researchers to identify and classify malware samples. With YARA you can create descriptions of malware families (or whatever you want to describe) based on textual or binary patterns. Each description, a.k.a. rule, consists of a set of strings and a boolean expression which determine its logic.
 
 ## Usage
 
@@ -19,7 +19,7 @@ Simply load the module after loading Highlight.js. You'll use the minified versi
 ```html
 <script type="text/javascript" src="/path/to/highlight.min.js"></script>
 <script type="text/javascript" charset="UTF-8"
-  src="/path/to/highlightjs-cypher/dist/cypher.min.js"></script>
+  src="/path/to/highlightjs-yara/dist/yara.min.js"></script>
 <script type="text/javascript">
   hljs.initHighlightingOnLoad();
 </script>
@@ -29,7 +29,7 @@ Simply load the module after loading Highlight.js. You'll use the minified versi
 
 ```html
 <script type="text/javascript"
-  src="https://unpkg.com/highlightjs-cypher/dist/cypher.min.js"></script>
+  src="https://unpkg.com/highlightjs-yara/dist/yara.min.js"></script>
 ```
 
 - More info: <https://unpkg.com>
@@ -40,22 +40,22 @@ If you're using Node / Webpack / Rollup / Browserify, etc, simply require the la
 
 ```javascript
 var hljs = require('highlightjs');
-var hljsCypher = require('highlightjs-cypher');
+var hljsYara = require('highlightjs-yara');
 
-hljs.registerLanguage("cypher", hljsCypher);
+hljs.registerLanguage("yara", hljsYara);
 hljs.initHighlightingOnLoad();
 ```
 
 ### React
 
-You need to import both Highlight.js and third-party language like Cypher:
+You need to import both Highlight.js and third-party language like Yara:
 
 ```js
 import React, {Component} from 'react'
 import 'highlight.js/scss/darcula.scss' # your favourite theme
-import cypher from './cypher'
+import yara from './yara'
 import hljs from 'highlight.js'
-hljs.registerLanguage('cypher', cypher);
+hljs.registerLanguage('yara', yara);
 
 class Highlighter extends Component
 {
@@ -71,7 +71,7 @@ class Highlighter extends Component
     return
     {
       <pre ref={(node) => this.node = node}>
-        <code className="cypher">
+        <code className="yara">
           {children}
         </code>
       </pre>
@@ -84,21 +84,18 @@ export default Highlighter;
 
 ## License
 
-Highlight.js is released under the CC0 1.0 License. See [LICENSE][1] file
+highlightjs-yara is released under the CC0 1.0 License. See [LICENSE][1] file
 for details.
 
 ### Author
 
-Johannes Wienke <languitar@semipol.de>
+Deniz Demirci 
 
-### Maintainer
-
-Gustavo Reis <gusbemacbe@gmail.com>
 
 ## Links
 
 - The official site for the Highlight.js library is <https://highlightjs.org/>.
 - The Highlight.js GitHub project: <https://github.com/highlightjs/highlight.js>
-- Learn more about Cypher: <https://neo4j.com/docs/cypher-manual/current/#cypher-intro>
+- Learn more about Yara: <https://github.com/Yara-Rules>
 
-[1]: https://github.com/highlightjs/highlightjs-cypher/blob/master/LICENSE
+[1]: https://github.com/d-demirci/highlightjs-yara/blob/master/LICENSE
