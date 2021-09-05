@@ -24,7 +24,7 @@ describe('Yara syntax highlighting', () =>
         const expectFilePath = filePath.replace('.txt', '.expect.txt');
         const code = await readFile(filePath, 'utf-8');
         const expected = await readFile(expectFilePath, 'utf-8');
-        const result = hljs.highlight('cypher', code);
+        const result = hljs.highlight('yara', code);
         const actual = result.value;
         actual.trim().should.eql(expected.trim(), file);
       });
